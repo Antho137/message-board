@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Message Board</title>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/index.css">
+    </head>
+    <body>
+        <div class="container">
+            <!-- Page Header -->
+            <header class="header">
+                <div class="site-heading">
+                    <h1>Message Board</h1>
+                </div>
+                <div class="new-msg">
+                    <a href="/new" class="btn btn-primary pull-right">New message</a>
+                </div>
+            </header>
+            <!-- Main Content -->
+            <main class="col-sm-12 mx-auto">
+                <% for (let i = 0; i < messages.length; i++) { %>
+                    <div class="message-board">
+                        <div class="message">
+                            <div class="user-msg">
+                                <%= messages[i].user %>
+                            </div>
+                            <div class="text-msg">
+                                <%= messages[i].text %>
+                            </div>
+                            <div class="time-msg">
+                                <%= messages[i].added %>
+                            </div>
+                        </div>
+                        <a href="/message/<%= i %>" class="btn btn-primary pull-right">Open</a>
+                    </div>
+                <% } %>
+            </main>
+        </div>    
+    </body>
+</html>

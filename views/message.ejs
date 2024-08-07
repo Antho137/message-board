@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Message Board</title>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/index.css">
+    </head>
+    <body>
+        <div class="container">
+            <!-- Page Header -->
+            <header class="header">
+                <div class="site-heading">
+                    <h1>Message Details</h1>
+                </div>
+                <div class="new-msg">
+                    <a href="/" class="btn btn-primary pull-right">Home page</a>
+                </div>
+            </header>
+            <!-- Main Content -->
+            <main class="col-sm-12 mx-auto">
+                <div class="msg-details">
+                    <p><span>User:</span> <%= message.user %></p>
+                    <p><span>Text:</span> <%= message.text %></p>
+                    <p><span>Date added:</span> <%= message.added.toLocaleString() %></p>
+                </div>
+            </main>
+        </div>    
+    </body>
+</html>

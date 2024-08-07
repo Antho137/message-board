@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Message Board</title>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/index.css">
+    </head>
+    <body>
+        <div class="container">
+            <!-- Page Header -->
+            <header class="header">
+                <div class="site-heading">
+                    <h1>New Message</h1>
+                </div>
+                <div class="new-msg">
+                    <a href="/" class="btn btn-primary pull-right">Home page</a>
+                </div>
+            </header>
+            <!-- Main Content -->
+            <main class="col-sm-12 mx-auto">
+                <form action="/new" method="POST">
+                    <div class="control-group">
+                        <label for="user">User</label>
+                        <input type="text" class="form-control" placeholder="Enter username" id="user" name="user" required> 
+                    </div>
+                    <div class="control-group">
+                        <label for="text">Text</label>
+                        <input type="text" class="form-control" placeholder="Enter message" id="text" name="text" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="messageBtn">Send</button>
+                </form>
+            </main>
+        </div>    
+    </body>
+</html>
