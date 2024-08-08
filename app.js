@@ -2,6 +2,7 @@ const express = require('express');
 const ejs = require('ejs');
 const path = require('path');
 const indexRouter = require("./routes/indexRoutes");
+const port = process.env.PORT || 3000;
 
 const app = express();
 
@@ -12,7 +13,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended:true }));
 app.use("/", indexRouter);
 
-const port = 3000;
 app.listen(port, () => {
-    console.log(`App listening on port ${port}!`);
+    console.log(`App listening at http://localhost:${port}!`);
 });
