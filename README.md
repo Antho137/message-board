@@ -17,4 +17,3 @@
 ## Links
 
 - Solution URL: https://github.com/Antho137/message-board
-- Live Site URL: https://antho137.github.io/message-board/
